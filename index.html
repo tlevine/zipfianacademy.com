@@ -18,9 +18,12 @@
                 padding-bottom: 40px;
             }
             .desktop { display: none; }
-            @media(min-width:500px) {
+            @media(min-width:840px) {
                 .desktop { display: block; }
                 .mobile { display: none; }
+            }
+            @media(max-width: 420px) {
+                .tiny {display: none;}
             }
         </style>
         <link href='http://fonts.googleapis.com/css?family=Nixie+One|Glegoo|Poiret+One|Montserrat+Alternates|Raleway+Dots|Megrim&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -75,13 +78,13 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="color-bar"></div>
             <div class="navbar-inner">
-              <div class="container mobile text-center">
-                <a href="/">
+              <div class="container mobile">
+                <a href="/" class="pull-left tiny">
                   <span class="logo-small">
                     <img src="http://cdn.zipfianacademy.com/img/logo.svg" width="80px" height="80px" />
                   </span>
                 </a>
-                <div>
+                <div class="pull-right">
                     <select>
                         <option value="/about">About</option>
                         <option class="why-btn">
