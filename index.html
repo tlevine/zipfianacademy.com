@@ -48,6 +48,7 @@
         <script>
           $(function(){
             // Mobile nav
+            $('#navigation').val(window.location.pathname)
             $('#navigation').change(function(e){
               window.location = $(this).val()
             })
@@ -94,12 +95,10 @@
                 </a>
                 <div class="pull-right">
                     <select id="navigation">
-                        <option value="/about">About</option>
-                        <option class="why-btn">
-                            <a value="/why">Why?</a>
-                        </option>
-                        <option value="/people">Our People</option>
-                        <option value="/getinvolved">Get Involved</option>
+                        <option value="/about/">About</option>
+                        <option value="/why/">Why?</option>
+                        <option value="/people/">Our People</option>
+                        <option value="/getinvolved/">Get Involved</option>
                         <option value="http://blog.zipfianacademy.com">Blog</option>
                     </select>
                     <a href="http://zipfiancollective.wufoo.com/forms/z7x3p3/" class="apply" target="_blank"><div class="apply">Apply Today</div></a>
