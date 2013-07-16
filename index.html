@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Teaching the Long Tail | Zipfian Academy</title>
+        <meta name="description" content="Zipfian Academy is a 12-week program located in San Francisco aimed to cultivate the knowledge and skills necessary to become proficient in data science. We are seeking the right questions to ask, exploring new methods and structures of learning, and fostering a community that values collaborative instruction and radical altruism. Driven by an intense curiosity, we strive to push the bounds of what is possible and seek to reimagine educational institution. ">
+        <meta name="viewport" content="width=device-width">
+        <meta name="bitly-verification" content="5a348d19649b"/>
+        <meta name="keywords" content="data, datascience, science, bootcamp, training, hadoop, big, bigdata, boot, camp, machine, learning, analysis, education, visualization, computer, datascientist, scientist, academy, zipf, zipfian, collective, zipfianacademy, zipfiancollective, zipfcollective, zipfacademy" >
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href='http://fonts.googleapis.com/css?family=Nixie+One|Glegoo|Poiret+One|Montserrat+Alternates|Raleway+Dots|Megrim&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="http://cdn.zipfianacademy.com/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+        <link href="http://cdn.zipfianacademy.com/css/bootstrap-responsive.min.css" rel='stylesheet' type='text/css'>
+        <link href="/css/font/font-awesome.min.css" rel='stylesheet' type='text/css'>
+        <link href="/css/font/font-awesome-social.css" rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/styles-1367561054000.css">
+        
+        <script src="http://cdn.zipfianacademy.com/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.2.2.min.js"></script>
+        <script type="text/javascript">
+          setTimeout(function(){var a=document.createElement("script");
+          var b=document.getElementsByTagName("script")[0];
+          a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5315.js?"+Math.floor(new Date().getTime()/3600000);
+          a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script>
+        <script src="/production.min-1363383276000.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <div class="modal hide fade signup" id="upgrade_browser">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</h2>
+            </div>
+
+            <script type="text/javascript">
+                $("#upgrade_browser").modal();
+            </script>
+        <![endif]-->
+
+        <div class="social">
+            <a target="_blank" href="http://twitter.com/zipfianacademy">
+                <div class="twitter social-icon">
+                    <i class="icon-twitter icon-2x"></i>
+                </div>
+            </a>
+            <a target="_blank" href="http://facebook.com/ZipfianAcademy">
+                <div class="facebook social-icon">
+                    <i class="icon-facebook icon-2x"></i>
+                </div>
+            </a>
+            <a href="mailto:hello@zipfianacademy.com">
+                <div class="email social-icon">
+                    <i class="icon-envelope icon-2x"></i>
+                </div>
+            </a>
+        </div>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="color-bar"></div>
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="/">
+                        <span class="logo-small">
+                        <img src="http://cdn.zipfianacademy.com/img/logo.svg" width="80px" height="80px" /></span><span class="brand"><span class="iso-orange">Zipfian</span><span class="iso-teal">Academy</span></span></a>
+                    <div class="pull-right">
+                        <ul class="nav">
+                            <li><a href="/about">About</a></li>
+                            <li class="why-btn">
+                                <a href="/why">Why?</a>
+                            </li>
+                            <li><a href="/people">Our People</a></li>
+                            <li><a href="/getinvolved">Get Involved</a></li>
+                            <li><a href="http://blog.zipfianacademy.com">Blog</a></li>
+                        </ul>
+                        <a href="http://zipfiancollective.wufoo.com/forms/z7x3p3/" class="apply" target="_blank"><div class="apply">Apply Today</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal hide fade signup" id="email_invalid">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h2>I'm sorry <span class="iso-orange username-signup"></span> but it appears you have entered an invalid email.</h2><p>Please resubmit the form with a valid email</p>
+        </div>
+
+        <div class="modal hide fade signup" id="email_valid">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h2>Thank you <span class="iso-orange username-signup"></span> for your interest in Zipfian Academy!</h2>
+            <p class="content">
+                You should receive a confirmation email shortly.  We invite you to join the conversation and become part of the community!
+            </p>
+            <ul>
+                <li>
+                    <a target="_blank" href="http://twitter.com/zipfianacademy">
+                        <div class="twitter social-icon">
+                            <i class="icon-twitter icon-2x"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a target="_blank" href="http://facebook.com/ZipfianAcademy">
+                        <div class="facebook social-icon">
+                            <i class="icon-facebook icon-2x"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:hello@zipfianacademy.com">
+                        <div class="email social-icon">
+                            <i class="icon-envelope icon-2x"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a target="_blank" href="http://www.skillshare.com/profile/Zipfian-Academy/3645959">
+                        <div class="skillshare-negative social-icon">
+                            <div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a target="_blank" href="http://blog.zipfianacademy.com">
+                        <div class="tumblr social-icon">
+                            <i class="icon-tumblr icon-2x"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a target="_blank" href="http://vimeo.com/zipfianacademy">
+                        <div class="vimeo social-icon">
+                            <i class="icon-vimeo icon-2x"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+<div class="wrap">
+<section class="city" id="paralax" data-type="background" data-speed="2">
+    <div class="hero-unit container">
+        <div class="text">
+            <h1 class="hero-call">Wrangle Data. Inspire People.</h1>
+            <h2>Become a <span class="iso-teal scroll-btn">data scientist</span> in 12 intense weeks</h2>
+            <div id="mc_embed_signup">
+                <form action="http://gmail.us5.list-manage2.com/subscribe/post?u=48fa611ed3ab41401fc677902&amp;id=b9919291f1" method="post" id="mc-embedded-subscribe-form" name="emailForm" class="validate form-inline email-form" target="_blank">
+                    <input type="text" placeholder="First Name" name="FNAME" class="input-small" id="mce-FNAME">
+                    <input type="text" placeholder="Last Name" name="LNAME" class="input-small" id="mce-LNAME">
+                    <input type="email" placeholder="Email" name="EMAIL" class="input-large required email" id="mce-EMAIL">
+                    <input type="submit" value="Stay Connected" class="email-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="explore scroll-btn">
+        <i class="icon-double-angle-down icon-4x"></i>
+    </div>
+</section>
+
+<div class="container">
+    <div class="span12 relative heading" id="teach-head">
+        <div class="strike-through"></div>
+        <h1 id="what-we-teach" class="heading-copy">What We Teach</h1>
+    </div>
+
+    <div class="row curriculum respond">
+        <div class="span4">
+            <h2>Statistics</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-bar-chart icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Learn the fundamentals of statistics and the theory behind the science to develop a strong foundation for the analysis of data.  Apply this knowledge to extract meaning from data and separate the signal from the noise.
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Visualization</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-sitemap icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    The most significant insight is only as good as your ability to communicate it to others.  Learn how to effectively visualize data to provide poignant and interactive displays, allowing you to tell your data story.
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Storage</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-hdd icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    All Data is important, whether big or small.  Learn how (and why) to choose the right datastore for the job, from one table in MySQL to an HBase cluster, and never lose a datum again.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row curriculum respond">
+        <div class="span4">
+            <h2>Query</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-comments icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Knowing how to distill answers from a heap of data can make all the difference.  Learn how to query your data efficiently to drill down into hidden insights.
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Exploration</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-eye-open icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Finding answers is impossible until you know the right questions to ask. And you cannot ask questions until you know your data intimately.  Learn how to interactively explore the domain of your dataset.
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Machine Learning</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-cogs icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Leveraging the computational power of computers can provide predictive insights that lie beyond the limits of human ability... there is no need to invent the future if you can predict it.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row curriculum respond">
+        <div class="span4">
+            <h2>Ingestion</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-filter icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Choose efficient data collection techniques and identify the right information source for your analysis. Whether that be from a streaming API or parsing Apache log files.
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Scrubbing</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-magic icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Data scientists spend ~80% of their time simply getting their data in the proper format.  Cleaning data is a unavoidable but extremely important skill to know (and know well).
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h2>Optimization</h2>
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-dashboard icon-4x"></i>
+                </div>
+                <div class="span3 content">
+                    Once you have built your data pipeline, making it run smoothly is no easy task.  Learn how to scale your collection, storage, and analysis to handle data that grows without bounds.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="span12 relative heading">
+        <div class="strike-through"></div>
+        <h1 id="why-we-teach" class="heading-copy">Why We Teach</h1>
+    </div>
+    <div class="row quote respond">
+        <div class="span10 offset1">
+            <h2>People create Value</h2>
+            <p class="top">
+                More than any other time in history, we face an unprecedented growth in the amount of data stored and processed. As of 2012, it is estimated that 2.5 quintillion (2.5x10^18) bytes are created every day. Out of the necessity to make sense of this mountain of data, new techniques and technologies have been developed at companies such as Google, Facebook, LinkedIn, and Twitter. As the industry begins to see the untapped value in their own data warehouses, the need for people who understand these new technologies is greater than ever. 
+            </p>
+            <p>
+                Enter Data Science -- a new discipline bringing together statistics, advanced computing, data engineering, visualization, business acumen, and the scientific method. Using these skills, Data Scientists distill patterns and insights from rich data sources and manage data on a scale previously unimaginable. Our mission is to enable the next generation of Data Scientists to leverage these technologies to unlock the true promise of Big Data. In this 12-week intensive course, students will hear from industry leaders, work with each other in hands-on labs, complete capstone projects analyzing novel datasets, and garner the skills necessary to succeed in the new field of Data Science. We provide extensive interview preparation and match students with prospective employers during our hiring day. 
+            </p>
+        </div>
+    </div>
+    <div class="row quote respond">
+        <div class="span10 offset1">
+            <h2>Education is our Future</h2>
+            <p>
+                Technological innovation advances forward not by keeping others down, but by hoisting each other up onto the shoulders of giants.  Our future rests on our efficacy at transferring knowledge from one generation to the next. At Zipfian Academy, we are dedicated to giving our students the knowledge and skills to become successful Data Scientists, and distill meaningful information from the enormous data in our world.
+            </p>
+        </div>
+    </div>
+    <div class="row quote respond">
+        <blockquote cite="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-3.html">
+            <div class="span1 offset2">
+                <i class="icon-quote-left icon-3x"></i>
+            </div>
+            <div class="span6">
+                I think that it's extraordinarily important that we in computer science keep fun in computing...  What you know about computing other people will learn. Don't feel as if the key to successful computing is only in your hands.  What's in your hands, I think and hope, is intelligence: the ability to see the machine as more than when you were first led up to it, that you can make it more.
+                    <footer>
+                        &#8212;<a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-3.html" target="_blank" class="iso-teal">Alan J. Perlis (April 1, 1922-February 7, 1990)</a>
+                    </footer>
+            </div>
+        </blockquote>
+    </div>
+
+    <div class="span12 relative heading">
+        <div class="strike-through"></div>
+        <i class="icon-star icon-3x iso-orange z-front"></i><a target="_blank" href="http://zipfiancollective.wufoo.com/forms/z7x3p3/" class="iso-teal"><h1 id="application-form" class="heading-copy">Apply!</h1></a><i class="icon-star icon-3x iso-orange z-front"></i>
+    </div>
+</div>
+</div>
+
+<div class="footbar foot-container" id="footer">
+            <div class="container">
+                <footer>
+                    <div class="row credit">
+                        <div class="pull-left">
+                            <div class="row">
+                                <a href="http://zipfianacademy.com/about#the-collective" class="iso-orange">The Zipfian Collective</a> &copy; 2013
+                            </div>
+                            <div class="row" style="margin-top: 10px">
+                                <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com/">Pattern by <a target="_blank" rel="cc:attributionURL" class="iso-teal" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-right social-foot">
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="http://twitter.com/zipfianacademy">
+                                        <div class="twitter social-icon">
+                                            <i class="icon-twitter icon-2x"></i>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="http://facebook.com/ZipfianAcademy">
+                                        <div class="facebook social-icon">
+                                            <i class="icon-facebook icon-2x"></i>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:hello@zipfianacademy.com">
+                                        <div class="email social-icon">
+                                            <i class="icon-envelope icon-2x"></i>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="http://www.skillshare.com/profile/Zipfian-Academy/3645959">
+                                        <div class="skillshare social-icon">
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a target="_blank" href="http://blog.zipfianacademy.com">
+                                        <div class="tumblr social-icon">
+                                            <i class="icon-tumblr icon-2x"></i>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="http://vimeo.com/zipfianacademy">
+                                        <div class="vimeo social-icon">
+                                            <i class="icon-vimeo icon-2x"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </footer>
+            </div>
+            <div class="color-bar-reverse"></div>
+        </div>
+        
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-39253303-1']);
+          _gaq.push(['_setDomainName', 'zipfianacademy.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+
+        <script type="text/javascript">
+          var _sf_async_config = { uid: 46344, domain: 'zipfianacademy.com' };
+          (function() {
+            function loadChartbeat() {
+              window._sf_endpt = (new Date()).getTime();
+              var e = document.createElement('script');
+              e.setAttribute('language', 'javascript');
+              e.setAttribute('type', 'text/javascript');
+              e.setAttribute('src',
+                (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                "js/chartbeat.js");
+              document.body.appendChild(e);
+            };
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+              loadChartbeat : function() { oldonload(); loadChartbeat(); };
+          })();
+        </script>
+    </body>
+</html>
