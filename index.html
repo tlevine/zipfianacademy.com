@@ -45,6 +45,14 @@
           a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
         </script>
         <script src="/production.min-1363383276000.js"></script>
+        <script>
+          $(function(){
+            // Mobile nav
+            $('#navigation').change(function(e){
+              window.location = $(this).val()
+            })
+          })
+        </script>
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -85,7 +93,7 @@
                   </span>
                 </a>
                 <div class="pull-right">
-                    <select>
+                    <select id="navigation">
                         <option value="/about">About</option>
                         <option class="why-btn">
                             <a value="/why">Why?</a>
